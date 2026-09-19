@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Your Name] — IT Service Delivery & Speaker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --beige: #f3ece1;
+    --beige-deep: #ebe1d1;
+    --terracotta: #c1633f;
+    --terracotta-soft: #e0a888;
+    --gold: #c9a24b;
+    --blue: #3d5a73;
+    --ink: #2e2a25;
+    --ink-soft: #6b6155;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--beige);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.65;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 64px 28px 100px;
+  }
+
+  /* HEADER */
+  header {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .photo-slot {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    background: var(--beige-deep);
+    border: 3px solid var(--terracotta);
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-soft);
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .photo-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .header-text h1 {
+    font-size: 2.1rem;
+    margin-bottom: 4px;
+  }
+
+  .header-text .role {
+    color: var(--terracotta);
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 0.92rem;
+  }
+
+  .contact-row a {
+    color: var(--blue);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  .contact-row a:hover {
+    border-bottom-color: var(--blue);
+  }
+
+  /* DIVIDERS — alternating gold / blue */
+  .rule {
+    height: 2px;
+    width: 100%;
+    margin: 44px 0;
+    border: none;
+  }
+
+  .rule-gold {
+    background: linear-gradient(to right, var(--gold), transparent 85%);
+  }
+
+  .rule-blue {
+    background: linear-gradient(to right, var(--blue), transparent 85%);
+  }
+
+  /* SECTIONS */
+  section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    position: relative;
+    display: inline-block;
+  }
+
+  section h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--terracotta);
+    margin-top: 8px;
+    border-radius: 2px;
+  }
+
+  .about-text p {
+    margin-bottom: 14px;
+    color: var(--ink);
+    font-size: 1rem;
+  }
+
+  .about-gallery {
+    display: flex;
+    gap: 14px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .about-gallery .photo-slot {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    border-width: 2px;
+  }
+
+  ul.highlights {
+    list-style: none;
+  }
+
+  ul.highlights li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 14px;
+  }
+
+  ul.highlights li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--terracotta);
+    font-weight: 600;
+  }
+
+  /* SKILLS GRID */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  .skill-chip {
+    background: var(--beige-deep);
+    border-left: 3px solid var(--gold);
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 0.93rem;
+    font-weight: 500;
+  }
+
+  /* ACCOMPLISHMENTS */
+  .accomplishment {
+    padding: 14px 0;
+    border-bottom: 1px dashed #ddd0ba;
+  }
+
+  .accomplishment:last-child {
+    border-bottom: none;
+  }
+
+  .accomplishment .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--blue);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 60px;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 500px) {
+    header { flex-direction: column; text-align: center; }
+    .contact-row { justify-content: center; }
+    section h2 { display: block; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header>
+    <div class="photo-slot">
+      <!-- Replace src with your headshot, e.g. src="assets/headshot.jpg" -->
+      <img src="assets/headshot.jpg" alt="[Your Name]" onerror="this.style.display='none'; this.parentElement.textContent='Photo';">
+    </div>
+    <div class="header-text">
+      <h1>[Your Name]</h1>
+      <div class="role">Senior IT Service Delivery & Service Management Professional</div>
+      <div class="contact-row">
+        <a href="mailto:your.email@example.com">your.email@example.com</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <span>Geneva, Switzerland</span>
+      </div>
+    </div>
+  </header>
+
+  <hr class="rule rule-gold">
+
+  <!-- ABOUT ME -->
+  <section>
+    <h2>About Me</h2>
+    <div class="about-text">
+      <p>I've spent about 15 years building and running IT service operations across banking, pharma, and manufacturing, at IBM and Infosys, on accounts spanning Wells Fargo, Citizens Bank, Equifax, ServiceMaster, and Pearson. My path started on the front line and moved up through QA, team leadership, and process ownership, so I understand service delivery from the ticket queue up.</p>
+      <p>More recently, my focus has shifted toward GRC and compliance (FDA, GDPR aligned work at Torrent Pharma and Otsuka Pharma), ITIL-driven process design, and Jira-based workflow integration. I hold certifications spanning Microsoft Cloud, ISC2 Cybersecurity, TOGAF Enterprise Architecture, ITIL v3, PRINCE2 Agile, Six Sigma, and Generative AI on Oracle Cloud, and I'm currently working toward ISO 22301 (Business Continuity Management).</p>
+      <p>Outside the day job, I'm a competitive Toastmaster (club president twice over, current Assistant Club Growth Director), a TEDx speaker coach, and a TEFL-certified business English coach. I also write and publish low-content books on Amazon KDP under the pen name "Tara." I like building things end to end, whether that's a service desk process or a speech.</p>
+    </div>
+
+    <!-- Optional small photo strip — add your own or delete this block -->
+    <div class="about-gallery">
+      <div class="photo-slot"><img src="assets/photo1.jpg" alt="" onerror="this.style.display='none';"></div>
+      <div class="photo-slot"><img src="assets/photo2.jpg" alt="" onerror="this.style.display='none';"></div>
+      <div class="photo-slot"><img src="assets/photo3.jpg" alt="" onerror="this.style.display='none';"></div>
+    </div>
+  </section>
+
+  <hr class="rule rule-blue">
+
+  <!-- CAREER HIGHLIGHTS -->
+  <section>
+    <h2>Career Highlights</h2>
+    <ul class="highlights">
+      <li>15+ years in IT Service Management and Service Delivery across IBM (Global Technology Services) and Infosys, on enterprise accounts including Wells Fargo, Citizens Bank, Equifax, ServiceMaster, and Pearson</li>
+      <li>Progressed from frontline support to Team Lead at AstraZeneca, owning shift operations, US handovers, holiday coverage, and the full agent lifecycle, hiring, training, go-live, performance</li>
+      <li>Led ITIL-aligned process design and Jira workflow integration as a manager at Lantheus</li>
+      <li>Managed GRC and compliance programs aligned to FDA and GDPR at Torrent Pharma and Otsuka Pharma, including data privacy, distributed cloud ops, and HA/DR design</li>
+      <li>Hands-on experience with Salesforce Sales Cloud alongside core ITSM tooling</li>
+    </ul>
+  </section>
+
+  <hr class="rule rule-gold">
+
+  <!-- SKILLS & CERTIFICATIONS -->
+  <section>
+    <h2>Skills & Certifications</h2>
+    <div class="skills-grid">
+      <div class="skill-chip">Microsoft Cloud</div>
+      <div class="skill-chip">ISC2 Cybersecurity</div>
+      <div class="skill-chip">TOGAF Certified Enterprise Architect</div>
+      <div class="skill-chip">Six Sigma White Belt</div>
+      <div class="skill-chip">ITIL v3</div>
+      <div class="skill-chip">PRINCE2 Agile</div>
+      <div class="skill-chip">Generative AI Professional, Oracle Cloud</div>
+    </div>
+  </section>
+
+  <hr class="rule rule-blue">
+
+  <!-- ACCOMPLISHMENTS -->
+  <section>
+    <h2>Accomplishments</h2>
+
+    <div class="accomplishment">
+      <div class="tag">Leadership</div>
+      Founded and led IBM India's LGBT employee Business Resource Group, growing membership from 12 to 800 in two years, providing engagement, support, and leadership development.
+    </div>
+
+    <div class="accomplishment">
+      <div class="tag">Public Speaking</div>
+      Winner, Evaluation Contest, among participants from 16 countries across Europe, Turkey, and Israel.
+    </div>
+
+    <div class="accomplishment">
+      <div class="tag">Public Speaking</div>
+      Runner-up, Speech Contest, Switzerland.
+    </div>
+
+    <div class="accomplishment">
+      <div class="tag">Toastmasters</div>
+      Assistant Club Growth Director (current term); past President of Impact Geneva Toastmasters Club; two-time President of IBM Toastmasters Club.
+    </div>
+
+    <div class="accomplishment">
+      <div class="tag">Coaching</div>
+      TEDxGrad Geneva speaker coach, preparing 5 students for their pitch and TEDx talk. Mentored 20+ executives on speech and presentation delivery.
+    </div>
+
+    <div class="accomplishment">
+      <div class="tag">Teaching</div>
+      TEFL certified; works as a Business English coach.
+    </div>
+  </section>
+
+  <footer>
+    Built and maintained by [Your Name] · Geneva, Switzerland
+  </footer>
+
+</div>
+
+</body>
+</html>
